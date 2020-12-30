@@ -4,6 +4,25 @@ namespace iCalendar;
 
 define("ICAL_BASEDIR", realpath(dirname(__FILE__)));
 
+require ICAL_BASEDIR . '/DataTypes/DataType.php';
+require ICAL_BASEDIR . '/DataTypes/Binary.php';
+require ICAL_BASEDIR . '/DataTypes/Duration.php';
+require ICAL_BASEDIR . '/DataTypes/Period.php';
+require ICAL_BASEDIR . '/DataTypes/Time.php';
+require ICAL_BASEDIR . '/DataTypes/Boolean.php';
+require ICAL_BASEDIR . '/DataTypes/Date.php';
+require ICAL_BASEDIR . '/DataTypes/FloatNum.php';
+require ICAL_BASEDIR . '/DataTypes/Recur.php';
+require ICAL_BASEDIR . '/DataTypes/Uri.php';
+require ICAL_BASEDIR . '/DataTypes/CalAddress.php';
+require ICAL_BASEDIR . '/DataTypes/DateTime.php';
+require ICAL_BASEDIR . '/DataTypes/IntegerNum.php';
+require ICAL_BASEDIR . '/DataTypes/Text.php';
+require ICAL_BASEDIR . '/DataTypes/UtcOffset.php';
+
+require ICAL_BASEDIR . '/Parameters/Parameter.php';
+require ICAL_BASEDIR . '/Parameters/AltRep.php';
+
 require ICAL_BASEDIR . "/Properties/Property.php";
 require ICAL_BASEDIR . "/Properties/Action.php";
 require ICAL_BASEDIR . "/Properties/DtStamp.php";
