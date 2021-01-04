@@ -13,14 +13,16 @@ class Parameter {
 	}
 	
 	public function setValue($value){
-		if($this->isValidType($value)) $this->value = $value;
+		if($this->isValidType($value)) $this->value = [$value];
+	}
+	
+	public function addValue(){
+		if($this->isValidType($value)) $this->value[] = $value;
 	}
 	
 	public function isValidType($value){
 		foreach($this->acceptable_types as $type){
-//			if($value instanceof "iCalendar\DataTypes\{$type}"){
-//				return true;
-//			}
+			if(is_a($value, "iCalendar\DataTypes\\".$type)) return true;
 		}
 		return false;
 	}

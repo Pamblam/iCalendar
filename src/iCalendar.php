@@ -22,6 +22,25 @@ require ICAL_BASEDIR . '/DataTypes/UtcOffset.php';
 
 require ICAL_BASEDIR . '/Parameters/Parameter.php';
 require ICAL_BASEDIR . '/Parameters/AltRep.php';
+require ICAL_BASEDIR . '/Parameters/Dir.php';
+require ICAL_BASEDIR . '/Parameters/Member.php';
+require ICAL_BASEDIR . '/Parameters/Related.php';
+require ICAL_BASEDIR . '/Parameters/Value.php';
+require ICAL_BASEDIR . '/Parameters/CommonName.php';
+require ICAL_BASEDIR . '/Parameters/Encoding.php';
+require ICAL_BASEDIR . '/Parameters/Role.php';
+require ICAL_BASEDIR . '/Parameters/CuType.php';
+require ICAL_BASEDIR . '/Parameters/FbType.php';
+require ICAL_BASEDIR . '/Parameters/PartStat.php';
+require ICAL_BASEDIR . '/Parameters/Rsvp.php';
+require ICAL_BASEDIR . '/Parameters/DelFrom.php';
+require ICAL_BASEDIR . '/Parameters/FmtType.php';
+require ICAL_BASEDIR . '/Parameters/Range.php';
+require ICAL_BASEDIR . '/Parameters/SentBy.php';
+require ICAL_BASEDIR . '/Parameters/DelTo.php';
+require ICAL_BASEDIR . '/Parameters/Language.php';
+require ICAL_BASEDIR . '/Parameters/RelType.php';
+require ICAL_BASEDIR . '/Parameters/Tzid.php';
 
 require ICAL_BASEDIR . "/Properties/Property.php";
 require ICAL_BASEDIR . "/Properties/Action.php";

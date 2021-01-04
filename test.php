@@ -1,6 +1,6 @@
 <?php
 
-require "./iCalendar/iCalendar.php";
+require "./src/iCalendar.php";
 
 $ical = new iCalendar\iCalendar();
 

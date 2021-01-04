@@ -2,11 +2,9 @@
 
 namespace iCalendar\Parameters;
 
-class AltRep extends Parameter{
-	protected $name = 'ALTREP';
+class DelTo extends Parameter{
+	protected $name = 'DELEGATED-TO';
 	protected $values = [];
-	protected $multi_values = false;
+	protected $multi_values = true;
 	protected $acceptable_types = ['Uri'];
-	
-	
 }
