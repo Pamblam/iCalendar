@@ -4,7 +4,7 @@ require "./src/iCalendar.php";
 
 $ical = new iCalendar\iCalendar();
 
-$prop = new iCalendar\Parameters\AltRep(new iCalendar\DataTypes\Uri('https://www.google.com'));
+$recur = new iCalendar\DataTypes\Recur("FREQ=SECONDLY;UNTIL=JAN 3, 2003");
 
-echo "<pre>"; var_dump($prop); exit;
+echo "<pre>"; var_dump($recur); exit;
 

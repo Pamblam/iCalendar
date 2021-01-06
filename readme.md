@@ -5,6 +5,7 @@ There are no full-featured PHP iCal implementtaions... even the official one suc
 
 #### Todo
 
- [x] Implement type validation in `\iCalendar\Parameters\Parameter::isValidType()`.
- [x] Finish converting all known parameters in `\iCalendar\Properties\Property()` to individual `Parameter` classes.
- [ ] Implement the `Recur` datatype.
+  - [x] Implement type validation in `\iCalendar\Parameters\Parameter::isValidType()`.
+  - [x] Finish converting all known parameters in `\iCalendar\Properties\Property()` to individual `Parameter` classes.
+  - [x] Implement the `Recur` datatype.
+  - [ ] Write Lexer / Parser
