@@ -10,6 +10,10 @@ class Period extends DataType {
 		$this->value = $value;
 	}
 	
+	public static function isValueCastable($value){
+		return self::isValidPeriodString($value);
+	}
+	
 	public static function isValidPeriodString(){
 		if(!is_string($value)) return false;
 		$parts = explode("/", $value);

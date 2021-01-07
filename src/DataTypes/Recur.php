@@ -179,4 +179,9 @@ class Recur extends DataType {
 		
 	}
 	
+	public static function isValueCastable($value){
+		$tmp = new \iCalendar\DataType\Recur($value);
+		return !empty($tmp->value);
+	}
+	
 }

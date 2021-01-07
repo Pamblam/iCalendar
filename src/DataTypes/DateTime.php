@@ -16,4 +16,8 @@ class DateTime extends DataType {
 		if(!is_string($value)) return false;
 		return false !== strtotime($value);
 	}
+	
+	public static function isValueCastable($value){
+		return self::isValidDateTimeString($value);
+	}
 }

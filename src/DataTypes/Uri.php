@@ -14,4 +14,8 @@ class Uri extends DataType {
 		if(!is_string($value)) return false;
 		return filter_var($value, FILTER_VALIDATE_URL) !== false;
 	}
+	
+	public static function isValueCastable($value){
+		return self::isValidUriString($value);
+	}
 }

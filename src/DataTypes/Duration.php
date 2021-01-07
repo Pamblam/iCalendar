@@ -15,6 +15,15 @@ class Duration extends DataType {
 		$this->value = $value;
 	}
 	
+	public static function isValueCastable($value){
+		if(is_int($value)) $value = self::secondsToStr($seconds);
+		if(is_string($value) && is_numeric($value)){
+			$value = intval($value);
+			$value = self::secondsToStr($seconds);
+		}
+		return self::isValidDurationString($value);
+	}
+	
 	public static function isValidDurationString($value){
 		if(!is_string($value)) return false;
 		$pattern = '/^([\-\+])?P(\d+W)?(\d+D)?(T(\d+H)?(\d+M)?(\d+S)?)?$/';

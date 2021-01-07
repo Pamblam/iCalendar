@@ -43,4 +43,8 @@ class UtcOffset extends DataType {
 			($seconds ? 
 				 str_pad(strval($seconds), 2, "0", STR_PAD_LEFT) : '');
 	}
+	
+	public static function isValueCastable($value){
+		return self::isValidUriString($value);
+	}
 }

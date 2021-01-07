@@ -22,4 +22,16 @@ class Boolean extends DataType {
 		return $this->value === null ? null :
 			$this->value ? "TRUE" : "FALSE";
 	}
+	
+	public static function isValueCastable($value){
+		if(is_string($value)){
+			$value = strtoupper(trim($value));
+			if($value === 'TRUE' || $value === '1') $value = true;
+			if($value === 'FALSE' || $value === '0') $value = false;
+		}else if(is_int($value)){
+			if($value === 1) $value = true;
+			if($value === 0) $value = false;
+		}
+		return is_bool($value);
+	}
 }

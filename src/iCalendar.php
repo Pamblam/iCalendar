@@ -99,6 +99,8 @@ require ICAL_BASEDIR . "/Components/StandardTime.php";
 require ICAL_BASEDIR . "/Components/TimeZone.php";
 require ICAL_BASEDIR . "/Components/ToDo.php";
 
+require ICAL_BASEDIR . "/IO/Parser.php";
+
 class iCalendar extends Components\Component{
 	
 	protected $name = 'iCalendar';

@@ -13,4 +13,13 @@ class CalAddress extends DataType {
 		if(!filter_var($email, FILTER_VALIDATE_EMAIL)) return;
 		$this->value = $value;
 	}
+	
+	public static function isValueCastable($value){
+		if(!is_string($value)) return false;
+		$value = trim(strtolower($value));
+		if(strpos($value, 'mailto:') !== 0) return false;
+		$email = substr($value, 7);
+		if(!filter_var($email, FILTER_VALIDATE_EMAIL)) return false;
+		return true;
+	}
 }

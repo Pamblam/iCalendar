@@ -12,4 +12,9 @@ class FloatNum extends DataType {
 	public function getValue(){
 		return $this->value === null ? null : "{$this->value}";
 	}
+	
+	public static function isValueCastable($value){
+		return is_numeric($value);
+	}
+	
 }

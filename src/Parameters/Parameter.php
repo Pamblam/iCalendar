@@ -13,7 +13,16 @@ class Parameter {
 	}
 	
 	public function setValue($value){
-		if($this->isValidType($value)) $this->value = [$value];
+		if($this->isValidType($value)){
+			$this->value = [$value];
+		}else{
+			foreach($this->acceptable_types as $type){
+				$typeclass = "\iCalendar\DataTypes\\".$type;
+				if(call_user_func("$typeclass::isValueCastable", $value)){
+					$this->value = [new $typeclass($value)];
+				}
+			}
+		}
 	}
 	
 	public function addValue(){
@@ -22,7 +31,8 @@ class Parameter {
 	
 	public function isValidType($value){
 		foreach($this->acceptable_types as $type){
-			if(is_a($value, "iCalendar\DataTypes\\".$type)) return true;
+			$typeclass = "\iCalendar\DataTypes\\".$type;
+			if(is_a($value, $typeclass)) return true;
 		}
 		return false;
 	}

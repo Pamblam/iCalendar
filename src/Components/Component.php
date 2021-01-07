@@ -8,6 +8,8 @@ class Component{
 	protected $subcomponents = [];
 	protected $allowed_subcomponents = [];
 	
+	public $parent_component = null;
+	
 	public function setProperty(\iCalendar\Properties\Property $property){
 		$this->properties[$property->name] = $property;
 	}
@@ -18,6 +20,7 @@ class Component{
 	
 	public function addComponent(\iCalendar\Components\Component $component){
 		if(in_array($component->name, $this->allowed_subcomponents)){
+			$component->parent_component = $this;
 			$this->subcomponents[] = $component;
 		}
 	}

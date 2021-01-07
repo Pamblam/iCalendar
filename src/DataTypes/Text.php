@@ -23,4 +23,7 @@ class Text extends DataType {
 		return preg_replace($escapeds, $unescapeds, $string);
 	}
 	
+	public static function isValueCastable($value){
+		return is_string($value);
+	}
 }

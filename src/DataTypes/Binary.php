@@ -13,4 +13,8 @@ class Binary extends DataType {
 	public function getValue(){
 		return $this->value;
 	}
+	
+	public static function isValueCastable($value){
+		return is_string($value);
+	}
 }

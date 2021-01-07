@@ -4,14 +4,10 @@ namespace iCalendar\Components;
 
 class TimeZone extends Component{
 	protected $name = 'VTIMEZONE';
-	protected $properties = [
-		'TZID'			=> null,
-		'LAST-MOD'		=> null,
-		'TZURL'			=> null,
-	];
+	protected $properties = [];
 	
 	protected $allowed_subcomponents = [
-		'StandardTime',
-		'DaylightTime'
+		'STANDARD',
+		'DAYLIGHT'
 	];
 }

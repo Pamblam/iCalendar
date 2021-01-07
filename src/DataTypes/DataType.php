@@ -17,4 +17,8 @@ class DataType {
 	public function getValue(){
 		return $this->value;
 	}
+	
+	public static function isValueCastable($value){
+		return true;
+	}
 }
